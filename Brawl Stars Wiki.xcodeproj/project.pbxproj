@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8474B0DF2B95CDDA00326CD8 /* BrawlerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474B0DE2B95CDDA00326CD8 /* BrawlerTableViewCell.swift */; };
+		8474B0E22B95CE0900326CD8 /* BrawlerTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474B0E12B95CE0900326CD8 /* BrawlerTableViewCellScreen.swift */; };
 		8478EBD22B94DF1A00798E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBD12B94DF1A00798E8C /* AppDelegate.swift */; };
 		8478EBD42B94DF1A00798E8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBD32B94DF1A00798E8C /* SceneDelegate.swift */; };
-		8478EBD62B94DF1A00798E8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBD52B94DF1A00798E8C /* ViewController.swift */; };
-		8478EBD92B94DF1A00798E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8478EBD72B94DF1A00798E8C /* Main.storyboard */; };
+		8478EBD62B94DF1A00798E8C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBD52B94DF1A00798E8C /* HomeVC.swift */; };
 		8478EBDB2B94DF1C00798E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8478EBDA2B94DF1C00798E8C /* Assets.xcassets */; };
 		8478EBDE2B94DF1C00798E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8478EBDC2B94DF1C00798E8C /* LaunchScreen.storyboard */; };
 		8478EBE92B94DF1D00798E8C /* Brawl_Stars_WikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBE82B94DF1D00798E8C /* Brawl_Stars_WikiTests.swift */; };
 		8478EBF32B94DF1D00798E8C /* Brawl_Stars_WikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBF22B94DF1D00798E8C /* Brawl_Stars_WikiUITests.swift */; };
 		8478EBF52B94DF1D00798E8C /* Brawl_Stars_WikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EBF42B94DF1D00798E8C /* Brawl_Stars_WikiUITestsLaunchTests.swift */; };
+		8478EC052B94E10900798E8C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EC042B94E10900798E8C /* HomeScreen.swift */; };
+		847DAE3B2B9D4D6500117C15 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DAE3A2B9D4D6500117C15 /* HomeViewModel.swift */; };
+		847DAE3E2B9D4E9500117C15 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DAE3D2B9D4E9500117C15 /* HomeService.swift */; };
+		847DAE412B9D51B400117C15 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DAE402B9D51B400117C15 /* NetworkError.swift */; };
+		848120CC2B96AF7400EC517C /* BrawlerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848120CB2B96AF7400EC517C /* BrawlerList.swift */; };
+		8486E42A2B955CD4005EDCBF /* BrawlerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E4292B955CD4005EDCBF /* BrawlerScreen.swift */; };
+		8486E42C2B9566DC005EDCBF /* BrawlerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E42B2B9566DC005EDCBF /* BrawlerVC.swift */; };
+		8486E4302B956C08005EDCBF /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E42F2B956C08005EDCBF /* ItemVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8474B0DE2B95CDDA00326CD8 /* BrawlerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerTableViewCell.swift; sourceTree = "<group>"; };
+		8474B0E12B95CE0900326CD8 /* BrawlerTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerTableViewCellScreen.swift; sourceTree = "<group>"; };
 		8478EBCE2B94DF1A00798E8C /* Brawl Stars Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brawl Stars Wiki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478EBD12B94DF1A00798E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8478EBD32B94DF1A00798E8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8478EBD52B94DF1A00798E8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8478EBD82B94DF1A00798E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8478EBD52B94DF1A00798E8C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8478EBDA2B94DF1C00798E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8478EBDD2B94DF1C00798E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8478EBDF2B94DF1C00798E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +59,14 @@
 		8478EBEE2B94DF1D00798E8C /* Brawl Stars WikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brawl Stars WikiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478EBF22B94DF1D00798E8C /* Brawl_Stars_WikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_WikiUITests.swift; sourceTree = "<group>"; };
 		8478EBF42B94DF1D00798E8C /* Brawl_Stars_WikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_WikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8478EC042B94E10900798E8C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		847DAE3A2B9D4D6500117C15 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		847DAE3D2B9D4E9500117C15 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		847DAE402B9D51B400117C15 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		848120CB2B96AF7400EC517C /* BrawlerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerList.swift; sourceTree = "<group>"; };
+		8486E4292B955CD4005EDCBF /* BrawlerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerScreen.swift; sourceTree = "<group>"; };
+		8486E42B2B9566DC005EDCBF /* BrawlerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerVC.swift; sourceTree = "<group>"; };
+		8486E42F2B956C08005EDCBF /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8474B0DD2B95CDA800326CD8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8474B0E02B95CDDF00326CD8 /* Screen */,
+				8474B0DE2B95CDDA00326CD8 /* BrawlerTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8474B0E02B95CDDF00326CD8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8474B0E12B95CE0900326CD8 /* BrawlerTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		8478EBC52B94DF1A00798E8C = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +134,14 @@
 		8478EBD02B94DF1A00798E8C /* Brawl Stars Wiki */ = {
 			isa = PBXGroup;
 			children = (
+				847DAE3F2B9D51A400117C15 /* Service */,
+				8486E42D2B956BF1005EDCBF /* Item */,
+				848120CE2B96B2F400EC517C /* Cell */,
+				8486E4242B955C99005EDCBF /* Brawler */,
+				848120CA2B96AF5F00EC517C /* Model */,
+				8478EC012B94E08F00798E8C /* Home */,
 				8478EBD12B94DF1A00798E8C /* AppDelegate.swift */,
 				8478EBD32B94DF1A00798E8C /* SceneDelegate.swift */,
-				8478EBD52B94DF1A00798E8C /* ViewController.swift */,
-				8478EBD72B94DF1A00798E8C /* Main.storyboard */,
 				8478EBDA2B94DF1C00798E8C /* Assets.xcassets */,
 				8478EBDC2B94DF1C00798E8C /* LaunchScreen.storyboard */,
 				8478EBDF2B94DF1C00798E8C /* Info.plist */,
@@ -125,6 +164,114 @@
 				8478EBF42B94DF1D00798E8C /* Brawl_Stars_WikiUITestsLaunchTests.swift */,
 			);
 			path = "Brawl Stars WikiUITests";
+			sourceTree = "<group>";
+		};
+		8478EC012B94E08F00798E8C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				847DAE3C2B9D4E4A00117C15 /* Service */,
+				847DAE392B9D4CF200117C15 /* HomeViewModel */,
+				8478EC032B94E0A600798E8C /* Screen */,
+				8478EC022B94E09D00798E8C /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8478EC022B94E09D00798E8C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8478EBD52B94DF1A00798E8C /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8478EC032B94E0A600798E8C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8478EC042B94E10900798E8C /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		847DAE392B9D4CF200117C15 /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				847DAE3A2B9D4D6500117C15 /* HomeViewModel.swift */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		847DAE3C2B9D4E4A00117C15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				847DAE3D2B9D4E9500117C15 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		847DAE3F2B9D51A400117C15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				847DAE402B9D51B400117C15 /* NetworkError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		848120CA2B96AF5F00EC517C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				848120CB2B96AF7400EC517C /* BrawlerList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		848120CE2B96B2F400EC517C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8486E4242B955C99005EDCBF /* Brawler */ = {
+			isa = PBXGroup;
+			children = (
+				8474B0DD2B95CDA800326CD8 /* Cell */,
+				8486E4262B955CA9005EDCBF /* Screen */,
+				8486E4252B955CA5005EDCBF /* VC */,
+			);
+			path = Brawler;
+			sourceTree = "<group>";
+		};
+		8486E4252B955CA5005EDCBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8486E42B2B9566DC005EDCBF /* BrawlerVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8486E4262B955CA9005EDCBF /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8486E4292B955CD4005EDCBF /* BrawlerScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		8486E42D2B956BF1005EDCBF /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				8486E42E2B956BF7005EDCBF /* VC */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		8486E42E2B956BF7005EDCBF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8486E42F2B956C08005EDCBF /* ItemVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +380,6 @@
 			files = (
 				8478EBDE2B94DF1C00798E8C /* LaunchScreen.storyboard in Resources */,
 				8478EBDB2B94DF1C00798E8C /* Assets.xcassets in Resources */,
-				8478EBD92B94DF1A00798E8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +404,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8478EBD62B94DF1A00798E8C /* ViewController.swift in Sources */,
+				8474B0E22B95CE0900326CD8 /* BrawlerTableViewCellScreen.swift in Sources */,
+				848120CC2B96AF7400EC517C /* BrawlerList.swift in Sources */,
+				8486E42C2B9566DC005EDCBF /* BrawlerVC.swift in Sources */,
+				8478EC052B94E10900798E8C /* HomeScreen.swift in Sources */,
+				8478EBD62B94DF1A00798E8C /* HomeVC.swift in Sources */,
+				847DAE3E2B9D4E9500117C15 /* HomeService.swift in Sources */,
 				8478EBD22B94DF1A00798E8C /* AppDelegate.swift in Sources */,
 				8478EBD42B94DF1A00798E8C /* SceneDelegate.swift in Sources */,
+				847DAE3B2B9D4D6500117C15 /* HomeViewModel.swift in Sources */,
+				8486E4302B956C08005EDCBF /* ItemVC.swift in Sources */,
+				847DAE412B9D51B400117C15 /* NetworkError.swift in Sources */,
+				8486E42A2B955CD4005EDCBF /* BrawlerScreen.swift in Sources */,
+				8474B0DF2B95CDDA00326CD8 /* BrawlerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +453,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8478EBD72B94DF1A00798E8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8478EBD82B94DF1A00798E8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8478EBDC2B94DF1C00798E8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +595,7 @@
 				INFOPLIST_FILE = "Brawl Stars Wiki/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +623,7 @@
 				INFOPLIST_FILE = "Brawl Stars Wiki/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
