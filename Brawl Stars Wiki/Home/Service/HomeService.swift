@@ -7,56 +7,47 @@
 
 import Foundation
 
-func getBrawlerList(completion: @escaping(Result<[Brawler],NetworkError>) -> Void) {
-//    func getBrawlerList(completion: @escaping(Result<[Brawler],NetworkError>) -> Void) {
+
+
+class HomeService {
     
-    let urlString: String = "https://hire-fast-api-backend.vercel.app/getBrawl"
-//    let urlString: String = "https://run.mocky.io/v3/927313f9-15de-40f5-9e15-327d4ebe273b"
-    
-    guard let url: URL = URL(string: urlString) else {
-        completion(.failure(.invalidURL(url: urlString)))
-        return
+    func getBrawlerList(completion: @escaping(Result<BrawlerList,NetworkError>) -> Void) {
         
-    }
-    
-    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let urlString: String = "https://hire-fast-api-backend.vercel.app/getBrawl"
+//        let urlString: String = "https://run.mocky.io/v3/927313f9-15de-40f5-9e15-327d4ebe273b"
         
-        if let error {
-            print("ERROR \(#function) Detalhe do erro: \(error.localizedDescription)")
-            DispatchQueue.main.sync {
-                completion(.failure(.networkFailure(error)))
-            }
+        guard let url: URL = URL(string: urlString) else {
+            completion(.failure(.invalidURL(url: urlString)))
             return
         }
         
-        guard let data else {
-            DispatchQueue.main.async {
-                completion(.failure(.noData))
-            }
-            return
-        }
-        
-        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            DispatchQueue.main.async {
-                completion(.failure(.invalidResponse))
-            }
-            return
-        }
-        
-        do {
-            let brawlerList: BrawlerList = try JSONDecoder().decode(BrawlerList.self, from: data)
-            print("SUCCESS -> \(#function)")
-            DispatchQueue.main.async {
-                completion(.success(brawlerList.brawler))
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let error {
+                print("ERROR \(#function) Detalhe do erro: \(error.localizedDescription)")
+                    completion(.failure(.networkFailure(error)))
+                return
             }
             
+            guard let data else {
+                    completion(.failure(.noData))
+                return
+            }
             
-        } catch {
-            print("ERROR -> \(#function)")
-            DispatchQueue.main.async {
-                completion(.failure(NetworkError.decodingError(error)))
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    completion(.failure(.invalidResponse))
+                return
+            }
+            
+            do {
+                let brawlerList: BrawlerList = try JSONDecoder().decode(BrawlerList.self, from: data)
+                print("SUCCESS -> \(#function)")
+                    completion(.success(brawlerList))
+            } catch {
+                print("ERROR -> \(#function)")
+                    completion(.failure(NetworkError.decodingError(error)))
             }
         }
+        task.resume()
     }
-    task.resume()
 }
