@@ -42,7 +42,6 @@ class HomeService {
             do {
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(BrawlerList.self, from: data)
-//                let brawlerList: BrawlerList = try JSONDecoder().decode(BrawlerList.self, from: data)
                 print("SUCCESS -> \(#function)")
                 completion(.success(model))
             } catch {
