@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Welcome
 struct BrawlerList: Codable {
-    let brawler: [Brawler]
+    var brawler: [Brawler]
 }
 
 // MARK: - Brawler

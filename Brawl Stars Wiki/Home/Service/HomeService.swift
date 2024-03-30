@@ -40,10 +40,12 @@ class HomeService {
             }
             
             do {
-                let decoder = JSONDecoder()
-                let model = try decoder.decode(BrawlerList.self, from: data)
-                print("SUCCESS -> \(#function)")
-                completion(.success(model))
+//                let decoder = JSONDecoder()
+//                let model = try decoder.decode(BrawlerList.self, from: data)
+//                print("SUCCESS -> \(#function)")
+//                completion(.success(model))
+                let brawlerList: BrawlerList = try JSONDecoder().decode(BrawlerList.self, from: data)
+                completion(.success(brawlerList))
             } catch {
                 print("ERROR -> \(#function)")
                     completion(.failure(NetworkError.decodingError(error)))

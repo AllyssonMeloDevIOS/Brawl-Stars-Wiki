@@ -43,11 +43,19 @@ class BrawlerTableViewCellScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            iconBrawl.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            iconBrawl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+//            iconBrawl.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+//            iconBrawl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+//            
+//            nameBrawler.leadingAnchor.constraint(equalTo: iconBrawl.trailingAnchor, constant: 10),
+//            nameBrawler.centerYAnchor.constraint(equalTo: centerYAnchor)
+            
+            iconBrawl.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
+            iconBrawl.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconBrawl.heightAnchor.constraint(equalToConstant: 25),
+            iconBrawl.widthAnchor.constraint(equalToConstant: 25),
             
             nameBrawler.leadingAnchor.constraint(equalTo: iconBrawl.trailingAnchor, constant: 10),
-            nameBrawler.centerYAnchor.constraint(equalTo: centerYAnchor)
+            nameBrawler.centerYAnchor.constraint(equalTo: centerYAnchor),
             
         ])
     }

@@ -29,7 +29,6 @@ extension HomeVC: HomeScreenProtocol {
         let vc: BrawlerVC = BrawlerVC()
         self.navigationController?.pushViewController(vc, animated: true)
         print(#function)
-        viewModel.fetchRequest()
     }
     
     func tappedItemButton() {

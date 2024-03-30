@@ -7,40 +7,44 @@
 
 import Foundation
 
-
-//class HomeViewModel {
-//    
-//    private var brawlerList: [Brawler] = []
-//    
-//    public var numberOfRowsInSection: Int {
-//        return brawlerList.count
-//        
-////        public func fetchRequest() {
-////            
-////        }
-//        
-//    }
-//    
-//    func loadCurrentBrawler(indexPath: IndexPath) -> Brawler {
-//        return brawlerList[indexPath.row]
-//    }
-//    
-//}
-
+protocol HomeViewModelProtocol: AnyObject {
+    func success()
+    func error(message: String)
+}
 
 class HomeViewModel {
     
-    var service: HomeService = HomeService()
+    private var service: HomeService = HomeService()
+    private var brawlerList: [Brawler] = []
+    
+    private weak var delegate: HomeViewModelProtocol?
+    
+    public func delegate(delegate: HomeViewModelProtocol?) {
+        self.delegate = delegate
+    }
+    
     
     public func fetchRequest() {
-        service.getBrawlerList { result in
+        service.getBrawlerList { [weak self] result in
+            guard let self else { return }
             switch result {
-            case .success(let success):
-                print(success)
+//            case .success(let success):
+//                self.brawlerList = success
+            case.success(let brawlerList):
+                self.brawlerList = brawlerList.brawler
+                
+                delegate?.success()
             case .failure(let failure):
-                print(failure.errorDescription ?? "")
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
+    }
+    public var numberOfRowsInSection: Int {
+        return brawlerList.count
+    }
+    
+    func loadCurrentBrawler(indexPath: IndexPath) -> Brawler {
+        return brawlerList[indexPath.row]
     }
 }
 
