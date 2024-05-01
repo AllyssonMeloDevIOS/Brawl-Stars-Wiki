@@ -19,17 +19,27 @@ class BrawlerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchRequest()
+//        viewModel.fetchRequest()
         viewModel.delegate(delegate: self)
+        brawlerScreen?.configTableViewProtocols(delegate: self, dataSource: self)
 
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchRequest()
+    }
+    
+    
     
 }
 
 extension BrawlerVC: HomeViewModelProtocol {
     func success() {
-        self.brawlerScreen?.configTableViewProtocols(delegate: self, dataSource: self)
-//        self.brawlerScreen?.tableView.reloadData()
+//        self.brawlerScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+        DispatchQueue.main.async {
+            self.brawlerScreen?.tableView.reloadData()
+
+        }
     }
     
     func error(message: String) {
@@ -55,5 +65,6 @@ extension BrawlerVC: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
     
-    
 }
+
+

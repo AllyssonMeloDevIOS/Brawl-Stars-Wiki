@@ -15,7 +15,9 @@ protocol HomeViewModelProtocol: AnyObject {
 class HomeViewModel {
     
     private var service: HomeService = HomeService()
-    private var brawlerList: [Brawler] = []
+//    private var brawlerList: [Brawler] = []
+    private var brawlerlist: [BrawlerList] = []
+    private var brawlerList : Brawler = []
     
     private weak var delegate: HomeViewModelProtocol?
     
@@ -28,10 +30,13 @@ class HomeViewModel {
         service.getBrawlerList { [weak self] result in
             guard let self else { return }
             switch result {
+
 //            case .success(let success):
-//                self.brawlerList = success
-            case.success(let brawlerList):
-                self.brawlerList = brawlerList.brawler
+//                self.brawlerList = brawlerlist.brawler
+//            case.success(let brawlerList):
+//                self.brawlerList = brawlerList.brawler
+            case.success(let result):
+                self.brawlerList = result
                 
                 delegate?.success()
             case .failure(let failure):
@@ -43,8 +48,9 @@ class HomeViewModel {
         return brawlerList.count
     }
     
-    func loadCurrentBrawler(indexPath: IndexPath) -> Brawler {
+    func loadCurrentBrawler(indexPath: IndexPath) -> BrawlerList {
         return brawlerList[indexPath.row]
     }
+
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BrawlerTableViewCell: UITableViewCell {
 
@@ -41,9 +42,11 @@ class BrawlerTableViewCell: UITableViewCell {
         ])
     }
     
-    public func setupBrawlerCell(data: Brawler) {
-        screen.iconBrawl.image = UIImage(named: data.iconBrawl ?? "")
+    public func setupBrawlerCell(data: BrawlerList) {
+//        screen.iconBrawl.image = UIImage(named: data.iconBrawl ?? "")
+        screen.iconBrawl.sd_setImage(with: URL(string: data.iconBrawl ?? ""))
         screen.nameBrawler.text = data.name ?? ""
     }
     
+                                          
 }

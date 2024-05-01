@@ -11,9 +11,10 @@ import Foundation
 
 class HomeService {
     
-    func getBrawlerList(completion: @escaping(Result<BrawlerList,NetworkError>) -> Void) {
+    func getBrawlerList(completion: @escaping(Result<Brawler,NetworkError>) -> Void) {
         
-        let urlString: String = "https://hire-fast-api-backend.vercel.app/getBrawl"
+//        let urlString: String = "https://hire-fast-api-backend.vercel.app/getBrawl"
+        let urlString: String = "https://brawlerwikiapi.cyclic.app/brawler"
 //        let urlString: String = "https://run.mocky.io/v3/927313f9-15de-40f5-9e15-327d4ebe273b"
         
         guard let url: URL = URL(string: urlString) else {
@@ -44,8 +45,13 @@ class HomeService {
 //                let model = try decoder.decode(BrawlerList.self, from: data)
 //                print("SUCCESS -> \(#function)")
 //                completion(.success(model))
-                let brawlerList: BrawlerList = try JSONDecoder().decode(BrawlerList.self, from: data)
-                completion(.success(brawlerList))
+//                let brawlerList: [BrawlerList] = try JSONDecoder().decode(BrawlerList.self, from: data)
+//                completion(.success([brawlerList]))
+//                let brawlerList = try JSONDecoder().decode(Brawler.self, from: data)
+//                completion(.success(brawlerList))
+                let decoder = JSONDecoder()
+                let model = try decoder.decode(Brawler.self, from: data)
+                completion(.success(model))
             } catch {
                 print("ERROR -> \(#function)")
                     completion(.failure(NetworkError.decodingError(error)))
@@ -54,3 +60,4 @@ class HomeService {
         task.resume()
     }
 }
+
